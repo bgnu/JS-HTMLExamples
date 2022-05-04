@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Double a number</title>
+  </head>
+  <body>
+    <p>This is where the numerical input will go.</p>
+    <input type="number" id="input" value="123" />
+    <p>Press the button below to process the input.</p>
+    <button id="button">Process</button>
+    <p>The output will be shown below.</p>
+    <span id="output">----</span>
+    <script>
+      function doubleNumber(num) {
+        return num * 2;
+      }
+
+      const button = document.getElementById("button");
+
+      const input = document.getElementById("input");
+
+      const output = document.getElementById("output");
+
+      button.addEventListener("click", (event) => {
+        output.innerHTML = doubleNumber(Number(input.value));
+      });
+    </script>
+  </body>
+</html>
